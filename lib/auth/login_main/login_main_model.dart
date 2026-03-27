@@ -35,7 +35,7 @@ class LoginMainModel extends FlutterFlowModel<LoginMainWidget> {
   }
 
   /// Action blocks.
-  Future login(BuildContext context) async {
+  Future loginBlock(BuildContext context) async {
     List<UserTenantViewRow>? loggedUserAB;
     List<LocationRow>? locationTreeDataAB;
     List<TeamRow>? teamTreeDataAB;
@@ -65,6 +65,8 @@ class LoginMainModel extends FlutterFlowModel<LoginMainWidget> {
         currentUserUid,
       ),
     );
+    // mint supabase token
+    await actions.updateSupabaseTokenWithTenantID();
     if (loggedUserAB.length == 1) {
       // adminRole defines access
       //
@@ -130,12 +132,14 @@ class LoginMainModel extends FlutterFlowModel<LoginMainWidget> {
                       teamTreeIDStart: teamTree,
                       roleTreeIDStart: roleTree,
                     );
+                    safeSetState(() {});
                     // set params dispatch  view
                     FFAppState().dispatchUIcontrol = DispatchUIStruct(
                       selectedLocation:
                           FFAppState().session.locationTreeIDStart,
                       selectedTeam: FFAppState().session.teamTreeIDStart,
                     );
+                    safeSetState(() {});
                   },
                 ),
               ),
@@ -145,8 +149,6 @@ class LoginMainModel extends FlutterFlowModel<LoginMainWidget> {
       );
     }
 
-    // mint supabase token
-    await actions.updateSupabaseTokenWithTenantID();
     // Get Location Ltree
     locationTreeDataAB = await LocationTable().queryRows(
       queryFn: (q) => q.eqOrNull(

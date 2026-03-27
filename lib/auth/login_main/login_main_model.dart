@@ -132,14 +132,14 @@ class LoginMainModel extends FlutterFlowModel<LoginMainWidget> {
                       teamTreeIDStart: teamTree,
                       roleTreeIDStart: roleTree,
                     );
-                    safeSetState(() {});
+
                     // set params dispatch  view
                     FFAppState().dispatchUIcontrol = DispatchUIStruct(
                       selectedLocation:
                           FFAppState().session.locationTreeIDStart,
                       selectedTeam: FFAppState().session.teamTreeIDStart,
                     );
-                    safeSetState(() {});
+
                   },
                 ),
               ),

@@ -1,0 +1,142 @@
+{
+  "project_info": {
+    "project_number": "520496699147",
+    "project_id": "holmes-xws01o",
+    "storage_bucket": "holmes-xws01o.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:520496699147:android:2d6d4609a40969afefb40e",
+        "android_client_info": {
+          "package_name": "com.corderoy.holmes"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "520496699147-6pdv23p7pcmii6gcbums7cvb8elu1eg7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.corderoy.holmes",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "520496699147-dcdp6iqvbimh92j73q6rldqlbbmpsgqj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLaV8UC-vvDA5h_pwP0kR4XnPm1N1rK6E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "520496699147-dcdp6iqvbimh92j73q6rldqlbbmpsgqj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "520496699147-1qf7d8s7d8804c5pvj29p86gu6q2cus5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.corderoy.holmes"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:520496699147:android:9e4b9fb3740a5391efb40e",
+        "android_client_info": {
+          "package_name": "com.mycompany.sherlock"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "520496699147-n4kp85prclk4ueb8qio06n7m9r3lmeoo.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mycompany.sherlock",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "520496699147-dcdp6iqvbimh92j73q6rldqlbbmpsgqj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLaV8UC-vvDA5h_pwP0kR4XnPm1N1rK6E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "520496699147-dcdp6iqvbimh92j73q6rldqlbbmpsgqj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "520496699147-1qf7d8s7d8804c5pvj29p86gu6q2cus5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.corderoy.holmes"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:520496699147:android:7e35d7e156ff5f8befb40e",
+        "android_client_info": {
+          "package_name": "com.soliis.sherlock"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "520496699147-igkpni1p7urorglnarns2m3jnsd5bf81.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.soliis.sherlock",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "520496699147-dcdp6iqvbimh92j73q6rldqlbbmpsgqj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBLaV8UC-vvDA5h_pwP0kR4XnPm1N1rK6E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "520496699147-dcdp6iqvbimh92j73q6rldqlbbmpsgqj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "520496699147-1qf7d8s7d8804c5pvj29p86gu6q2cus5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.corderoy.holmes"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

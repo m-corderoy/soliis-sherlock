@@ -1,0 +1,5 @@
+{
+  "supabaseUrl": "https://kbhebouujenlqndnunwz.supabase.co",
+"supabaseAnonKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtiaGVib3V1amVubHFuZG51bnd6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzczOTE5MzMsImV4cCI6MjA1Mjk2NzkzM30.seWvIhG9SXEpa0JwFEX3H34a2olwXi5wCwFLDsy_73Q",
+"apiBaseUrl": "https://soliis-cloud-520496699147.europe-west1.run.app"
+}

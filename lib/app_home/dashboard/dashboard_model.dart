@@ -61,6 +61,10 @@ class DashboardModel extends FlutterFlowModel<DashboardWidget> {
 
   dynamic postDataJson;
 
+  String? panelMode;
+
+  int? rowIndex = -1;
+
   ///  State fields for stateful widgets in this page.
 
   // Model for supportmenu component.

@@ -541,55 +541,56 @@ class _DashboardBuilderWidgetState extends State<DashboardBuilderWidget>
                                                                                           execute: (boardname, boarddesciption) async {
                                                                                             _model.boardUiName = boardname;
                                                                                             _model.boardPrompt = boarddesciption;
-                                                                                            safeSetState(() {});
                                                                                           },
                                                                                         ),
                                                                                       ),
                                                                                     ),
                                                                                   );
                                                                                 },
-                                                                              );
-
-                                                                              _model.configType = 'btc';
-                                                                              _model.chatSessionID = functions.createUuid();
-                                                                              _model.chatPrompt1 = 'You want to create a new Dashboard?';
-                                                                              _model.chatPrompt2 = 'Please describe the role of the Dashboard, what sort of information will be posted to it...';
-                                                                              safeSetState(() {});
-                                                                              _model.chatInit1 = await InitChatSessionCall.call(
-                                                                                pConfigType: 'btc',
-                                                                                pSourceSchemaId: null,
-                                                                                pSessionId: _model.chatSessionID,
-                                                                                pTenantId: _model.tenantID,
-                                                                                token: FFAppState().supabaseAuthToken,
-                                                                                supabaseKey: FFDevEnvironmentValues().supabaseAnonKey,
-                                                                              );
+                                                                              ).then((value) => safeSetState(() => _model.dlgResponse = value));
 
                                                                               _shouldSetState = true;
-                                                                              if ((_model.chatInit1?.succeeded ?? true)) {
-                                                                                _model.showChat = true;
-                                                                                _model.actionCase = 1;
-                                                                                _model.isPublished = true;
+                                                                              if (_model.dlgResponse!) {
+                                                                                _model.configType = 'btc';
+                                                                                _model.chatSessionID = functions.createUuid();
+                                                                                _model.chatPrompt1 = 'You want to create a new Dashboard?';
+                                                                                _model.chatPrompt2 = 'Please describe the role of the Dashboard, what sort of information will be posted to it...';
                                                                                 safeSetState(() {});
-                                                                              } else {
-                                                                                await showDialog(
-                                                                                  context: context,
-                                                                                  builder: (alertDialogContext) {
-                                                                                    return AlertDialog(
-                                                                                      title: Text('AI Error'),
-                                                                                      content: Text('The initialisation of the AI system has not succeeded'),
-                                                                                      actions: [
-                                                                                        TextButton(
-                                                                                          onPressed: () => Navigator.pop(alertDialogContext),
-                                                                                          child: Text('Ok'),
-                                                                                        ),
-                                                                                      ],
-                                                                                    );
-                                                                                  },
+                                                                                _model.chatInit1 = await InitChatSessionCall.call(
+                                                                                  pConfigType: 'btc',
+                                                                                  pSourceSchemaId: null,
+                                                                                  pSessionId: _model.chatSessionID,
+                                                                                  pTenantId: _model.tenantID,
+                                                                                  token: FFAppState().supabaseAuthToken,
+                                                                                  supabaseKey: FFDevEnvironmentValues().supabaseAnonKey,
                                                                                 );
-                                                                                if (_shouldSetState) safeSetState(() {});
-                                                                                return;
-                                                                              }
 
+                                                                                _shouldSetState = true;
+                                                                                if ((_model.chatInit1?.succeeded ?? true)) {
+                                                                                  _model.showChat = true;
+                                                                                  _model.actionCase = 1;
+                                                                                  _model.isPublished = true;
+                                                                                  safeSetState(() {});
+                                                                                } else {
+                                                                                  await showDialog(
+                                                                                    context: context,
+                                                                                    builder: (alertDialogContext) {
+                                                                                      return AlertDialog(
+                                                                                        title: Text('AI Error'),
+                                                                                        content: Text('The initialisation of the AI system has not succeeded'),
+                                                                                        actions: [
+                                                                                          TextButton(
+                                                                                            onPressed: () => Navigator.pop(alertDialogContext),
+                                                                                            child: Text('Ok'),
+                                                                                          ),
+                                                                                        ],
+                                                                                      );
+                                                                                    },
+                                                                                  );
+                                                                                  if (_shouldSetState) safeSetState(() {});
+                                                                                  return;
+                                                                                }
+                                                                              }
                                                                               if (_shouldSetState)
                                                                                 safeSetState(() {});
                                                                             },

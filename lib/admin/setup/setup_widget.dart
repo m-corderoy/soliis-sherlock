@@ -855,16 +855,13 @@ class _SetupWidgetState extends State<SetupWidget> {
                                                                       ),
                                                                       decoration:
                                                                           BoxDecoration(
-                                                                        border:
-                                                                            Border.all(
-                                                                          color:
-                                                                              FlutterFlowTheme.of(context).alternate,
-                                                                        ),
+                                                                        borderRadius:
+                                                                            BorderRadius.circular(2.0),
                                                                       ),
                                                                       child:
                                                                           ClipRRect(
                                                                         borderRadius:
-                                                                            BorderRadius.circular(4.0),
+                                                                            BorderRadius.circular(2.0),
                                                                         child: Image
                                                                             .network(
                                                                           setupTenantRow!
@@ -957,22 +954,41 @@ class _SetupWidgetState extends State<SetupWidget> {
                                                                         }
                                                                       }
 
-                                                                      await TenantTable()
-                                                                          .update(
-                                                                        data: {
-                                                                          'logo_url':
-                                                                              _model.uploadedFileUrl_uploadDataImage,
-                                                                        },
-                                                                        matchingRows:
-                                                                            (rows) =>
-                                                                                rows.eqOrNull(
-                                                                          'id',
-                                                                          setupTenantRow
-                                                                              .id,
-                                                                        ),
-                                                                      );
-                                                                      safeSetState(
-                                                                          () {});
+                                                                      if (_model.uploadedFileUrl_uploadDataImage !=
+                                                                              '') {
+                                                                        await TenantTable()
+                                                                            .update(
+                                                                          data: {
+                                                                            'logo_url':
+                                                                                _model.uploadedFileUrl_uploadDataImage,
+                                                                          },
+                                                                          matchingRows: (rows) =>
+                                                                              rows.eqOrNull(
+                                                                            'id',
+                                                                            setupTenantRow.id,
+                                                                          ),
+                                                                        );
+                                                                        safeSetState(
+                                                                            () {});
+                                                                      } else {
+                                                                        await showDialog(
+                                                                          context:
+                                                                              context,
+                                                                          builder:
+                                                                              (alertDialogContext) {
+                                                                            return AlertDialog(
+                                                                              title: Text(_model.uploadedFileUrl_uploadDataImage),
+                                                                              content: Text('reset'),
+                                                                              actions: [
+                                                                                TextButton(
+                                                                                  onPressed: () => Navigator.pop(alertDialogContext),
+                                                                                  child: Text('Ok'),
+                                                                                ),
+                                                                              ],
+                                                                            );
+                                                                          },
+                                                                        );
+                                                                      }
                                                                     },
                                                                     text:
                                                                         'Upload',

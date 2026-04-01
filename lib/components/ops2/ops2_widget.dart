@@ -88,8 +88,6 @@ class _Ops2WidgetState extends State<Ops2Widget> {
                       )
                     ],
                     borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(0.0),
-                      bottomRight: Radius.circular(0.0),
                       topLeft: Radius.circular(8.0),
                       topRight: Radius.circular(8.0),
                     ),

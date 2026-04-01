@@ -350,7 +350,7 @@ Map<String, dynamic> getTenantlistFirestoreData(
   final firestoreData = mapToFirestore(tenantlist.toMap());
 
   // Add any Firestore field values
-  tenantlist.firestoreUtilData.fieldValues
+  mapToFirestore(tenantlist.firestoreUtilData.fieldValues)
       .forEach((k, v) => firestoreData[k] = v);
 
   return forFieldValue ? mergeNestedFields(firestoreData) : firestoreData;

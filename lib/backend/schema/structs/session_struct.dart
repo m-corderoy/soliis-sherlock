@@ -406,7 +406,8 @@ Map<String, dynamic> getSessionFirestoreData(
   final firestoreData = mapToFirestore(session.toMap());
 
   // Add any Firestore field values
-  session.firestoreUtilData.fieldValues.forEach((k, v) => firestoreData[k] = v);
+  mapToFirestore(session.firestoreUtilData.fieldValues)
+      .forEach((k, v) => firestoreData[k] = v);
 
   return forFieldValue ? mergeNestedFields(firestoreData) : firestoreData;
 }

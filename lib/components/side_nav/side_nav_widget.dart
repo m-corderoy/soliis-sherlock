@@ -78,12 +78,7 @@ class _SideNavWidgetState extends State<SideNavWidget> {
             width: 220.0,
             decoration: BoxDecoration(
               color: FlutterFlowTheme.of(context).alternate,
-              borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(0.0),
-                bottomRight: Radius.circular(0.0),
-                topLeft: Radius.circular(0.0),
-                topRight: Radius.circular(0.0),
-              ),
+              borderRadius: BorderRadius.only(),
             ),
             child: Padding(
               padding: EdgeInsetsDirectional.fromSTEB(0.0, 2.0, 0.0, 4.0),
@@ -601,13 +596,8 @@ class _SideNavWidgetState extends State<SideNavWidget> {
                                                   }
                                                 }(),
                                                 borderRadius: BorderRadius.only(
-                                                  bottomLeft:
-                                                      Radius.circular(0.0),
                                                   bottomRight:
                                                       Radius.circular(12.0),
-                                                  topLeft: Radius.circular(0.0),
-                                                  topRight:
-                                                      Radius.circular(0.0),
                                                 ),
                                               ),
                                               child: Padding(
@@ -850,103 +840,7 @@ class _SideNavWidgetState extends State<SideNavWidget> {
                                                               Flexible(
                                                                 flex: 3,
                                                                 child: Text(
-                                                                  'App Builder',
-                                                                  style: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .bodyMedium
-                                                                      .override(
-                                                                        font: GoogleFonts
-                                                                            .inter(
-                                                                          fontWeight: FlutterFlowTheme.of(context)
-                                                                              .bodyMedium
-                                                                              .fontWeight,
-                                                                          fontStyle: FlutterFlowTheme.of(context)
-                                                                              .bodyMedium
-                                                                              .fontStyle,
-                                                                        ),
-                                                                        color: FlutterFlowTheme.of(context)
-                                                                            .secondaryText,
-                                                                        letterSpacing:
-                                                                            0.0,
-                                                                        fontWeight: FlutterFlowTheme.of(context)
-                                                                            .bodyMedium
-                                                                            .fontWeight,
-                                                                        fontStyle: FlutterFlowTheme.of(context)
-                                                                            .bodyMedium
-                                                                            .fontStyle,
-                                                                      ),
-                                                                  overflow:
-                                                                      TextOverflow
-                                                                          .ellipsis,
-                                                                ),
-                                                              ),
-                                                            ].divide(SizedBox(
-                                                                width: 6.0)),
-                                                          ),
-                                                        ),
-                                                      ),
-                                                    ),
-                                                  ),
-                                                  Padding(
-                                                    padding:
-                                                        EdgeInsetsDirectional
-                                                            .fromSTEB(0.0, 0.0,
-                                                                4.0, 0.0),
-                                                    child: Container(
-                                                      decoration: BoxDecoration(
-                                                        color: widget
-                                                                    .selectedNav ==
-                                                                45
-                                                            ? FlutterFlowTheme
-                                                                    .of(context)
-                                                                .accent1
-                                                            : Color(0x00000000),
-                                                        borderRadius:
-                                                            BorderRadius
-                                                                .circular(4.0),
-                                                      ),
-                                                      child: Padding(
-                                                        padding:
-                                                            EdgeInsets.all(4.0),
-                                                        child: InkWell(
-                                                          splashColor: Colors
-                                                              .transparent,
-                                                          focusColor: Colors
-                                                              .transparent,
-                                                          hoverColor: Colors
-                                                              .transparent,
-                                                          highlightColor: Colors
-                                                              .transparent,
-                                                          onTap: () async {
-                                                            context.pushNamed(
-                                                                DispatchesWidget
-                                                                    .routeName);
-                                                          },
-                                                          child: Row(
-                                                            mainAxisSize:
-                                                                MainAxisSize
-                                                                    .max,
-                                                            children: [
-                                                              Padding(
-                                                                padding: EdgeInsetsDirectional
-                                                                    .fromSTEB(
-                                                                        18.0,
-                                                                        0.0,
-                                                                        12.0,
-                                                                        0.0),
-                                                                child: Icon(
-                                                                  Icons
-                                                                      .photo_filter_sharp,
-                                                                  color: FlutterFlowTheme.of(
-                                                                          context)
-                                                                      .primaryText,
-                                                                  size: 18.0,
-                                                                ),
-                                                              ),
-                                                              Flexible(
-                                                                flex: 3,
-                                                                child: Text(
-                                                                  'Dispatch Card',
+                                                                  'Card Builder',
                                                                   style: FlutterFlowTheme.of(
                                                                           context)
                                                                       .bodyMedium
@@ -1284,13 +1178,8 @@ class _SideNavWidgetState extends State<SideNavWidget> {
                                                   }
                                                 }(),
                                                 borderRadius: BorderRadius.only(
-                                                  bottomLeft:
-                                                      Radius.circular(0.0),
                                                   bottomRight:
                                                       Radius.circular(12.0),
-                                                  topLeft: Radius.circular(0.0),
-                                                  topRight:
-                                                      Radius.circular(0.0),
                                                 ),
                                               ),
                                               child: Padding(
@@ -1863,13 +1752,8 @@ class _SideNavWidgetState extends State<SideNavWidget> {
                                                   }
                                                 }(),
                                                 borderRadius: BorderRadius.only(
-                                                  bottomLeft:
-                                                      Radius.circular(0.0),
                                                   bottomRight:
                                                       Radius.circular(12.0),
-                                                  topLeft: Radius.circular(0.0),
-                                                  topRight:
-                                                      Radius.circular(0.0),
                                                 ),
                                               ),
                                               child: Padding(

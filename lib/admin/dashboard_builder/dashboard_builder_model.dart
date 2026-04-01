@@ -84,6 +84,8 @@ class DashboardBuilderModel extends FlutterFlowModel<DashboardBuilderWidget> {
   // State field(s) for DropDownOps widget.
   int? dropDownOpsValue;
   FormFieldController<int>? dropDownOpsValueController;
+  // Stores action output result for [Alert Dialog - Custom Dialog] action in IconButton widget.
+  bool? dlgResponse;
   // Stores action output result for [Backend Call - API (Init chat session)] action in IconButton widget.
   ApiCallResponse? chatInit1;
   // Stores action output result for [Backend Call - Query Rows] action in IconButton widget.

@@ -76,7 +76,7 @@ class _NewDashboardWidgetState extends State<NewDashboardWidget> {
                 decoration: BoxDecoration(),
                 child: Padding(
                   padding:
-                      EdgeInsetsDirectional.fromSTEB(20.0, 24.0, 20.0, 0.0),
+                      EdgeInsetsDirectional.fromSTEB(24.0, 24.0, 24.0, 0.0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     crossAxisAlignment: CrossAxisAlignment.start,
@@ -125,7 +125,7 @@ class _NewDashboardWidgetState extends State<NewDashboardWidget> {
                                 size: 24.0,
                               ),
                               onPressed: () async {
-                                Navigator.pop(context);
+                                Navigator.pop(context, false);
                               },
                             ),
                           ),
@@ -413,7 +413,7 @@ class _NewDashboardWidgetState extends State<NewDashboardWidget> {
                       _model.description =
                           _model.descriptionTextController.text;
                       safeSetState(() {});
-                      Navigator.pop(context);
+                      Navigator.pop(context, true);
                       await widget.execute?.call(
                         _model.name,
                         _model.description,

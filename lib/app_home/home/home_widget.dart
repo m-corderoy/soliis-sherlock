@@ -392,10 +392,6 @@ class _HomeWidgetState extends State<HomeWidget> {
                                                                               24.0,
                                                                           barBorderRadius:
                                                                               BorderRadius.only(
-                                                                            bottomLeft:
-                                                                                Radius.circular(0.0),
-                                                                            bottomRight:
-                                                                                Radius.circular(0.0),
                                                                             topLeft:
                                                                                 Radius.circular(4.0),
                                                                             topRight:

@@ -2902,8 +2902,6 @@ class _UserMgmtWidgetState extends State<UserMgmtWidget>
                                           color: FlutterFlowTheme.of(context)
                                               .alternate,
                                           borderRadius: BorderRadius.only(
-                                            bottomLeft: Radius.circular(0.0),
-                                            bottomRight: Radius.circular(0.0),
                                             topLeft: Radius.circular(8.0),
                                             topRight: Radius.circular(8.0),
                                           ),

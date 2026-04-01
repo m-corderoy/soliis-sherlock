@@ -125,7 +125,8 @@ Map<String, dynamic> getDisplayFirestoreData(
   final firestoreData = mapToFirestore(display.toMap());
 
   // Add any Firestore field values
-  display.firestoreUtilData.fieldValues.forEach((k, v) => firestoreData[k] = v);
+  mapToFirestore(display.firestoreUtilData.fieldValues)
+      .forEach((k, v) => firestoreData[k] = v);
 
   return forFieldValue ? mergeNestedFields(firestoreData) : firestoreData;
 }

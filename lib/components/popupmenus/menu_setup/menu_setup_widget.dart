@@ -55,10 +55,8 @@ class _MenuSetupWidgetState extends State<MenuSetupWidget> {
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).alternate,
         borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(0.0),
-          bottomRight: Radius.circular(6.0),
-          topLeft: Radius.circular(0.0),
           topRight: Radius.circular(6.0),
+          bottomRight: Radius.circular(6.0),
         ),
       ),
       child: Column(

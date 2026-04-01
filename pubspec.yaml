@@ -44,7 +44,7 @@ dependencies:
   cloud_functions_platform_interface: 5.7.2
   cloud_functions_web: 4.11.2
   collection: 1.19.1
-  cross_file: 0.3.4+2
+  cross_file: 0.3.5+1
   csslib: 1.0.2
   dropdown_button2: 2.3.9
   easy_debounce: 2.0.1
@@ -68,13 +68,9 @@ dependencies:
   fl_chart: 1.0.0
   flutter_animate: 4.5.0
   flutter_cache_manager: 3.4.1
-  flutter_markdown: 0.7.3+1
+  flutter_markdown: ^0.7.7+1
   flutter_n8n_chat_ui: ^1.0.3
   flutter_plugin_android_lifecycle: 2.0.28
-  flutterflow_colorpicker: 
-    git:
-      url: https://github.com/FlutterFlow/flutterflow_colorpicker.git
-      ref: v0.0.1+1
   font_awesome_flutter: 10.7.0
   from_css_color: 2.0.0
   functions_client: 2.4.2

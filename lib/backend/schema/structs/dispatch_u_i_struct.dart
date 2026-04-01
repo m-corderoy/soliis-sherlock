@@ -238,7 +238,7 @@ Map<String, dynamic> getDispatchUIFirestoreData(
   final firestoreData = mapToFirestore(dispatchUI.toMap());
 
   // Add any Firestore field values
-  dispatchUI.firestoreUtilData.fieldValues
+  mapToFirestore(dispatchUI.firestoreUtilData.fieldValues)
       .forEach((k, v) => firestoreData[k] = v);
 
   return forFieldValue ? mergeNestedFields(firestoreData) : firestoreData;

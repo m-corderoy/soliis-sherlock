@@ -120,33 +120,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => TeamsWidget(),
         ),
         FFRoute(
-          name: OrgSetup40Widget.routeName,
-          path: OrgSetup40Widget.routePath,
-          builder: (context, params) => OrgSetup40Widget(),
-        ),
-        FFRoute(
-          name: UserManagement2Widget.routeName,
-          path: UserManagement2Widget.routePath,
-          requireAuth: true,
-          builder: (context, params) => UserManagement2Widget(
-            imageurl: params.getParam(
-              'imageurl',
-              ParamType.String,
-            ),
-          ),
-        ),
-        FFRoute(
-          name: ReportSetup60Widget.routeName,
-          path: ReportSetup60Widget.routePath,
-          builder: (context, params) => ReportSetup60Widget(),
-        ),
-        FFRoute(
-          name: DispatchesWidget.routeName,
-          path: DispatchesWidget.routePath,
-          requireAuth: true,
-          builder: (context, params) => DispatchesWidget(),
-        ),
-        FFRoute(
           name: ProfileWidget.routeName,
           path: ProfileWidget.routePath,
           builder: (context, params) => ProfileWidget(),
@@ -155,16 +128,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           name: VerificationCheckWidget.routeName,
           path: VerificationCheckWidget.routePath,
           builder: (context, params) => VerificationCheckWidget(),
-        ),
-        FFRoute(
-          name: List23ActivityResponsiveWidget.routeName,
-          path: List23ActivityResponsiveWidget.routePath,
-          builder: (context, params) => List23ActivityResponsiveWidget(),
-        ),
-        FFRoute(
-          name: CmsSetup80Widget.routeName,
-          path: CmsSetup80Widget.routePath,
-          builder: (context, params) => CmsSetup80Widget(),
         ),
         FFRoute(
           name: HomeWidget.routeName,
@@ -184,29 +147,15 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           ),
         ),
         FFRoute(
-          name: TestdropdownWidget.routeName,
-          path: TestdropdownWidget.routePath,
-          builder: (context, params) => TestdropdownWidget(),
-        ),
-        FFRoute(
-          name: UserManagementOLDWidget.routeName,
-          path: UserManagementOLDWidget.routePath,
-          requireAuth: true,
-          builder: (context, params) => UserManagementOLDWidget(
-            imageurl: params.getParam(
-              'imageurl',
-              ParamType.String,
-            ),
-          ),
-        ),
-        FFRoute(
           name: UserMgmtWidget.routeName,
           path: UserMgmtWidget.routePath,
+          requireAuth: true,
           builder: (context, params) => UserMgmtWidget(),
         ),
         FFRoute(
           name: AppBuilderWidget.routeName,
           path: AppBuilderWidget.routePath,
+          requireAuth: true,
           builder: (context, params) => AppBuilderWidget(),
         ),
         FFRoute(
@@ -228,26 +177,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => LocationWidget(),
         ),
         FFRoute(
-          name: OldadminWidget.routeName,
-          path: OldadminWidget.routePath,
-          requireAuth: true,
-          builder: (context, params) => OldadminWidget(),
-        ),
-        FFRoute(
           name: DashboardBuilderWidget.routeName,
           path: DashboardBuilderWidget.routePath,
-          builder: (context, params) => DashboardBuilderWidget(),
-        ),
-        FFRoute(
-          name: AppBuilder2Widget.routeName,
-          path: AppBuilder2Widget.routePath,
-          builder: (context, params) => AppBuilder2Widget(),
-        ),
-        FFRoute(
-          name: DispatchesOrigWidget.routeName,
-          path: DispatchesOrigWidget.routePath,
           requireAuth: true,
-          builder: (context, params) => DispatchesOrigWidget(),
+          builder: (context, params) => DashboardBuilderWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

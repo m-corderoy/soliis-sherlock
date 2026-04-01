@@ -10,10 +10,20 @@ import 'package:flutter/material.dart';
 class LoginMainModel extends FlutterFlowModel<LoginMainWidget> {
   ///  State fields for stateful widgets in this page.
 
+  final formKey = GlobalKey<FormState>();
   // State field(s) for emailAddress widget.
   FocusNode? emailAddressFocusNode;
   TextEditingController? emailAddressTextController;
   String? Function(BuildContext, String?)? emailAddressTextControllerValidator;
+  String? _emailAddressTextControllerValidator(
+      BuildContext context, String? val) {
+    if (val == null || val.isEmpty) {
+      return 'Email is required';
+    }
+
+    return null;
+  }
+
   // State field(s) for password widget.
   FocusNode? passwordFocusNode;
   TextEditingController? passwordTextController;
@@ -22,6 +32,7 @@ class LoginMainModel extends FlutterFlowModel<LoginMainWidget> {
 
   @override
   void initState(BuildContext context) {
+    emailAddressTextControllerValidator = _emailAddressTextControllerValidator;
     passwordVisibility = false;
   }
 
@@ -132,14 +143,12 @@ class LoginMainModel extends FlutterFlowModel<LoginMainWidget> {
                       teamTreeIDStart: teamTree,
                       roleTreeIDStart: roleTree,
                     );
-
                     // set params dispatch  view
                     FFAppState().dispatchUIcontrol = DispatchUIStruct(
                       selectedLocation:
                           FFAppState().session.locationTreeIDStart,
                       selectedTeam: FFAppState().session.teamTreeIDStart,
                     );
-
                   },
                 ),
               ),

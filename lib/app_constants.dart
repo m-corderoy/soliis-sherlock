@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 abstract class FFAppConstants {
   static const String AppName = 'soliis control';
-  static const String AppVersion = '3-26-003';
+  static const String AppVersion = '3-28-003';
   static const List<Color> ColourPallete5 = [
     Color(4281257073),
     Color(4288928068),

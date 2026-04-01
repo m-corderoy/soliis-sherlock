@@ -56,10 +56,8 @@ class _MenuAIWidgetState extends State<MenuAIWidget> {
       decoration: BoxDecoration(
         color: FlutterFlowTheme.of(context).alternate,
         borderRadius: BorderRadius.only(
-          bottomLeft: Radius.circular(0.0),
-          bottomRight: Radius.circular(6.0),
-          topLeft: Radius.circular(0.0),
           topRight: Radius.circular(6.0),
+          bottomRight: Radius.circular(6.0),
         ),
       ),
       child: Column(
@@ -430,7 +428,7 @@ class _MenuAIWidgetState extends State<MenuAIWidget> {
                           false;
                       if (!confirmDialogResponse) {
                         context.pushNamed(
-                          DispatchesWidget.routeName,
+                          PromptWidget.routeName,
                           extra: <String, dynamic>{
                             '__transition_info__': TransitionInfo(
                               hasTransition: true,
@@ -442,7 +440,7 @@ class _MenuAIWidgetState extends State<MenuAIWidget> {
                       }
                     } else {
                       context.pushNamed(
-                        DispatchesWidget.routeName,
+                        PromptWidget.routeName,
                         extra: <String, dynamic>{
                           '__transition_info__': TransitionInfo(
                             hasTransition: true,
@@ -459,15 +457,15 @@ class _MenuAIWidgetState extends State<MenuAIWidget> {
                       Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 18.0, 0.0),
-                        child: Icon(
-                          Icons.photo_filter_rounded,
+                        child: FaIcon(
+                          FontAwesomeIcons.robot,
                           color: FlutterFlowTheme.of(context).primaryText,
-                          size: 24.0,
+                          size: 20.0,
                         ),
                       ),
                       Expanded(
                         child: Text(
-                          'Dispatch Cards',
+                          'Dashboard Agents',
                           style:
                               FlutterFlowTheme.of(context).bodyMedium.override(
                                     font: GoogleFonts.inter(
@@ -574,121 +572,6 @@ class _MenuAIWidgetState extends State<MenuAIWidget> {
                       Padding(
                         padding:
                             EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 18.0, 0.0),
-                        child: FaIcon(
-                          FontAwesomeIcons.robot,
-                          color: FlutterFlowTheme.of(context).primaryText,
-                          size: 20.0,
-                        ),
-                      ),
-                      Expanded(
-                        child: Text(
-                          'Dashboard Agents',
-                          style:
-                              FlutterFlowTheme.of(context).bodyMedium.override(
-                                    font: GoogleFonts.inter(
-                                      fontWeight: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontWeight,
-                                      fontStyle: FlutterFlowTheme.of(context)
-                                          .bodyMedium
-                                          .fontStyle,
-                                    ),
-                                    letterSpacing: 0.0,
-                                    fontWeight: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontWeight,
-                                    fontStyle: FlutterFlowTheme.of(context)
-                                        .bodyMedium
-                                        .fontStyle,
-                                  ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-            onEnter: ((event) async {
-              safeSetState(() => _model.mouseRegionHovered4 = true);
-            }),
-            onExit: ((event) async {
-              safeSetState(() => _model.mouseRegionHovered4 = false);
-            }),
-          ),
-          MouseRegion(
-            opaque: false,
-            cursor: MouseCursor.defer ?? MouseCursor.defer,
-            child: Container(
-              width: double.infinity,
-              height: 28.0,
-              decoration: BoxDecoration(
-                color: _model.mouseRegionHovered5
-                    ? FlutterFlowTheme.of(context).secondaryBackground
-                    : Color(0x00000000),
-              ),
-              child: Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(36.0, 0.0, 0.0, 0.0),
-                child: InkWell(
-                  splashColor: Colors.transparent,
-                  focusColor: Colors.transparent,
-                  hoverColor: Colors.transparent,
-                  highlightColor: Colors.transparent,
-                  onTap: () async {
-                    if ((widget.selectNav == 70) && widget.contentWarning!) {
-                      var confirmDialogResponse = await showDialog<bool>(
-                            context: context,
-                            builder: (alertDialogContext) {
-                              return AlertDialog(
-                                title: Text('Save changes'),
-                                content: Text(
-                                    'Changes have been made, do you want to Save?'),
-                                actions: [
-                                  TextButton(
-                                    onPressed: () => Navigator.pop(
-                                        alertDialogContext, false),
-                                    child: Text('Ignore'),
-                                  ),
-                                  TextButton(
-                                    onPressed: () =>
-                                        Navigator.pop(alertDialogContext, true),
-                                    child: Text('Save'),
-                                  ),
-                                ],
-                              );
-                            },
-                          ) ??
-                          false;
-                      if (!confirmDialogResponse) {
-                        context.pushNamed(
-                          PromptWidget.routeName,
-                          extra: <String, dynamic>{
-                            '__transition_info__': TransitionInfo(
-                              hasTransition: true,
-                              transitionType: PageTransitionType.fade,
-                              duration: Duration(milliseconds: 0),
-                            ),
-                          },
-                        );
-                      }
-                    } else {
-                      context.pushNamed(
-                        PromptWidget.routeName,
-                        extra: <String, dynamic>{
-                          '__transition_info__': TransitionInfo(
-                            hasTransition: true,
-                            transitionType: PageTransitionType.fade,
-                            duration: Duration(milliseconds: 0),
-                          ),
-                        },
-                      );
-                    }
-                  },
-                  child: Row(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      Padding(
-                        padding:
-                            EdgeInsetsDirectional.fromSTEB(0.0, 0.0, 18.0, 0.0),
                         child: Icon(
                           Icons.payments_outlined,
                           color: FlutterFlowTheme.of(context).primaryText,
@@ -724,10 +607,10 @@ class _MenuAIWidgetState extends State<MenuAIWidget> {
               ),
             ),
             onEnter: ((event) async {
-              safeSetState(() => _model.mouseRegionHovered5 = true);
+              safeSetState(() => _model.mouseRegionHovered4 = true);
             }),
             onExit: ((event) async {
-              safeSetState(() => _model.mouseRegionHovered5 = false);
+              safeSetState(() => _model.mouseRegionHovered4 = false);
             }),
           ),
         ].divide(SizedBox(height: 10.0)),

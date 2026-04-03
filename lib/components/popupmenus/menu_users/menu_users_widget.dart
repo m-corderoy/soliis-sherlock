@@ -101,11 +101,11 @@ class _MenuUsersWidgetState extends State<MenuUsersWidget> {
                         ) ??
                         false;
                     if (!confirmDialogResponse) {
-                      context.pushNamed(AppBuilderWidget.routeName);
+                      context.pushNamed(CardBuilderWidget.routeName);
                     }
                   } else {
                     context.pushNamed(
-                      AppBuilderWidget.routeName,
+                      CardBuilderWidget.routeName,
                       extra: <String, dynamic>{
                         '__transition_info__': TransitionInfo(
                           hasTransition: true,

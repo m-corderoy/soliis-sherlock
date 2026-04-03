@@ -813,7 +813,7 @@ class _SideNavWidgetState extends State<SideNavWidget> {
                                                               .transparent,
                                                           onTap: () async {
                                                             context.pushNamed(
-                                                                AppBuilderWidget
+                                                                CardBuilderWidget
                                                                     .routeName);
                                                           },
                                                           child: Row(

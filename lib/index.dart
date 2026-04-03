@@ -12,7 +12,7 @@ export '/auth/verification_check/verification_check_widget.dart'
 export '/app_home/home/home_widget.dart' show HomeWidget;
 export '/admin/template/template_widget.dart' show TemplateWidget;
 export '/admin/user_mgmt/user_mgmt_widget.dart' show UserMgmtWidget;
-export '/admin/app_builder/app_builder_widget.dart' show AppBuilderWidget;
+export '/admin/card_builder/card_builder_widget.dart' show CardBuilderWidget;
 export '/admin/setup/setup_widget.dart' show SetupWidget;
 export '/admin/prompt/prompt_widget.dart' show PromptWidget;
 export '/admin/location/location_widget.dart' show LocationWidget;

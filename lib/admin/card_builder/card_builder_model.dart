@@ -4,10 +4,10 @@ import '/components/side_nav/side_nav_widget.dart';
 import '/components/supportmenu/supportmenu_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/form_field_controller.dart';
-import 'app_builder_widget.dart' show AppBuilderWidget;
+import 'card_builder_widget.dart' show CardBuilderWidget;
 import 'package:flutter/material.dart';
 
-class AppBuilderModel extends FlutterFlowModel<AppBuilderWidget> {
+class CardBuilderModel extends FlutterFlowModel<CardBuilderWidget> {
   ///  Local state fields for this page.
 
   String? chatSessionID;

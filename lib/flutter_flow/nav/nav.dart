@@ -153,10 +153,10 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => UserMgmtWidget(),
         ),
         FFRoute(
-          name: AppBuilderWidget.routeName,
-          path: AppBuilderWidget.routePath,
+          name: CardBuilderWidget.routeName,
+          path: CardBuilderWidget.routePath,
           requireAuth: true,
-          builder: (context, params) => AppBuilderWidget(),
+          builder: (context, params) => CardBuilderWidget(),
         ),
         FFRoute(
           name: SetupWidget.routeName,
